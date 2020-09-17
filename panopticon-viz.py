@@ -20,5 +20,5 @@ if __name__ == "__main__":
         title="Panopticon Time Chart",
         template="plotly_dark",
     )
-    fig.update_traces(textposition="inside", textinfo="percent+label")
+    fig.update_traces(textposition="outside", textinfo="percent+label")
     fig.show()

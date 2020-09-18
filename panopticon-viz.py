@@ -55,11 +55,12 @@ if __name__ == "__main__":
         ),
         columns=["begin", "end", "activity", "milliseconds"],
     )
+    df["hours"] = df.milliseconds/3600000.0
 
     df = df[df.activity != "none"]
     fig = px.pie(
         df,
-        values="milliseconds",
+        values="hours",
         names="activity",
         title="Panopticon Time Chart",
         template="plotly_dark",
